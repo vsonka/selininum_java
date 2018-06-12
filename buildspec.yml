@@ -2,7 +2,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - npm install time
+      - mvn install
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket lambda-python-pipeline --output-template-file outputSamTemplate.yaml
 artifacts:
   type: zip
